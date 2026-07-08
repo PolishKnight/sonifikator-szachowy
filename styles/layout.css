@@ -32,3 +32,13 @@ h1 {
   margin: 0 0 1.5rem;
   color: var(--muted);
 }
+
+.subtitle a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.subtitle a:hover {
+  text-decoration: underline;
+}
