@@ -28,7 +28,7 @@ i otwórz `http://localhost:5500` w przeglądarce. Alternatywnie w VS Code: rozs
 
 ## Wersja online (GitHub Pages)
 
-Po włączeniu GitHub Pages (Settings → Pages → branch `main`, folder `/ (root)`) strona działa pod `https://polishknight.github.io/sonifikator-szachowy/` - GitHub Pages serwuje pliki przez HTTPS, więc ograniczenie z sekcji "Uruchomienie" dotyczy wyłącznie otwierania pliku lokalnie z dysku.
+Po włączeniu GitHub Pages (Settings → Pages → branch `master`, folder `/ (root)`) strona działa pod `https://polishknight.github.io/sonifikator-szachowy/` - GitHub Pages serwuje pliki przez HTTPS, więc ograniczenie z sekcji "Uruchomienie" dotyczy wyłącznie otwierania pliku lokalnie z dysku.
 
 ## Struktura projektu
 
