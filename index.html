@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonifikator Szachowy</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <div class="theme-switcher">
+        <button data-theme-choice="" class="theme-btn">Domyślny</button>
+        <button data-theme-choice="light" class="theme-btn">Jasny</button>
+        <button data-theme-choice="dark-neon" class="theme-btn">Ciemny</button>
+      </div>
+
+      <h1>Sonifikator Szachowy</h1>
+      <p class="subtitle">
+        Wklej ID partii albo link z lichess.org i posłuchaj, jak brzmiała
+      </p>
+
+      <div class="controls">
+        <input
+          id="gameId"
+          type="text"
+          placeholder="np. abcd1234 albo https://lichess.org/abcd1234"
+        />
+        <button id="fetchButton">Pobierz partię</button>
+        <button id="playButton" disabled>Odtwórz</button>
+        <select id="instrument">
+          <option value="soft">Miękki (sinus)</option>
+          <option value="warm">Ciepły (trójkąt)</option>
+          <option value="pluck">Struny</option>
+          <option value="bell">Dzwonki</option>
+        </select>
+      </div>
+
+      <p id="nowPlaying" class="now-playing"></p>
+
+      <pre id="output" class="moves"></pre>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/15.3.5/Tone.js"></script>
+    <script src="scripts/lichess-game.js"></script>
+    <script src="scripts/note-mapper.js"></script>
+    <script src="scripts/piece-symbols.js"></script>
+    <script src="scripts/instrument-rack.js"></script>
+    <script src="scripts/moves-view.js"></script>
+    <script src="scripts/theme-switcher.js"></script>
+    <script src="scripts/player.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

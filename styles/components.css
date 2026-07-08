@@ -1,0 +1,108 @@
+.theme-switcher {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.theme-btn.active {
+  background: var(--highlight);
+  color: #1c1a17;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+#gameId {
+  flex: 1 1 260px;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.95rem;
+  user-select: text;
+}
+
+#gameId:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+button:disabled {
+  background: var(--border);
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+#instrument {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.now-playing {
+  min-height: 2.4em;
+  margin: 0 0 1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-weight: 600;
+  text-align: center;
+}
+
+.moves {
+  margin: 0;
+  padding: 1rem;
+  max-height: 50vh;
+  overflow-y: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.moves .move {
+  display: inline-block;
+  padding: 0 2px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.moves .move:hover {
+  background-color: var(--border);
+}
+
+.moves .move.current {
+  background-color: var(--highlight);
+  color: #1c1a17;
+}
