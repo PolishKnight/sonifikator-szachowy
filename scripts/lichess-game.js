@@ -14,9 +14,11 @@ class LichessGame {
     try {
       const url = new URL(trimmed);
       const [id] = url.pathname.split("/").filter(Boolean);
-      return id ?? "";
+      // Prawdziwe ID gry na Lichess to zawsze 8 znaków - dłuższe segmenty to
+      // np. doklejony prywatny token gracza (.../xBvsApPWo1ha zamiast .../xBvsApPW).
+      return (id ?? "").slice(0, 8);
     } catch {
-      return trimmed;
+      return trimmed.slice(0, 8);
     }
   }
 
